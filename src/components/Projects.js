@@ -21,7 +21,7 @@ const Projects = () => {
 				toggleProjectDetail={toggleProjectDetail}
 				projectDetailIsOpen={projectDetailIsOpen}
 			/>
-			<h1 className='text-center font-weight-bold'>Projects</h1>
+			<h1 className='text-center font-weight-bold my-3'>Projects</h1>
 			<MDBRow>
 				{ProjectData.map((project, i) => (
 					<ProjectItem

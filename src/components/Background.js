@@ -51,6 +51,10 @@ const Background = ({ isPortrait }) => {
 					particles[j].show();
 					particles[j].update();
 				}
+				if (p5.frameCount % 1000 == 0) {
+					particles.splice(0, particles.length);
+					p5.noLoop();
+				}
 				// image.loadPixels();
 			}}
 		/>

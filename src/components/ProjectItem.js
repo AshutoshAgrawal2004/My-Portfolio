@@ -15,7 +15,9 @@ const ProjectItem = ({ project, i, toggleProjectDetail }) => {
 				className='my-3'
 				style={{
 					borderRadius: '0',
-					boxShadow: '8px 8px 0 rgba(0,0,0,.15)',
+					// boxShadow: '8px 8px 0 rgba(0,0,0,.15)',
+					boxShadow:
+						'-1vmin -1vmin 2vmin 1vmin #333, 1vmin 1vmin 1vmin #1e1e1e',
 				}}
 			>
 				<div className='project-title-bar'>
