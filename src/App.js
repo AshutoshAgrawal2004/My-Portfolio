@@ -2,15 +2,19 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Home from './components/Home';
-
+import Intro from './components/Intro';
+import Projects from './components/Projects';
 function App() {
 	return (
-		<Router>
-			<Switch>
-				<Route exact path='/' component={Home} />
-			</Switch>
-		</Router>
+		<>
+			<Intro />
+			<Projects />
+		</>
+		// <Router>
+		// 	<Switch>
+		// 		<Route exact path='/' component={Intro} />
+		// 	</Switch>
+		// </Router>
 	);
 }
 

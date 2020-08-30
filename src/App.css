@@ -2,9 +2,72 @@
 
 body {
   font-family: 'Lato', sans-serif !important;
+  background-color: #2a2a2a !important;
+  color: #F9F6EF !important;
 }
 
 .view {
-  position: fixed !important;
+  position: inherit !important;
   overflow: visible !important;
+}
+
+.awssld__content {
+  background-color: #242424 !important;
+}
+
+.awssld__content>img,
+.awssld__content>video {
+  object-fit: inherit !important;
+  height: unset !important;
+  position: unset !important;
+
+}
+
+.project-title-bar {
+  display: block;
+  position: relative;
+  height: 24px;
+  background-color: #ddd;
+  width: 100%;
+  color: #6a6a6a;
+  z-index: 10;
+}
+
+.project-title-bar h2 {
+  content: attr(data-text);
+  text-align: center;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-family: MontSerrat, Tahoma, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: -.5px;
+  color: #8a8a8a;
+}
+
+.project-title-bar i,
+.project-title-bar i:before,
+.project-title-bar i::after {
+  height: 12px;
+  width: 12px;
+  display: inline-block;
+  background-color: #ff5f57;
+  border-radius: 50%;
+  position: absolute;
+  top: 6px;
+  left: 10px;
+}
+
+.project-title-bar i:before {
+  content: " ";
+  left: 16px;
+  background-color: #ffbd2e;
+  top: 0;
+}
+
+.project-title-bar i:after {
+  content: " ";
+  left: 32px;
+  background-color: #28ca41;
+  top: 0;
 }

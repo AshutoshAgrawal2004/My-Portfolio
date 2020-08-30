@@ -24,7 +24,7 @@ const Background = ({ isPortrait }) => {
 				// mycan.parent('canvascontainer');
 				p5.pixelDensity(1);
 				// img = loadImage("Pikachu Jump.png");
-				p5.background(51);
+				p5.background(0);
 				p5.frameRate(30);
 			}}
 			draw={(p5) => {

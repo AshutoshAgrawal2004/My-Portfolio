@@ -4,20 +4,19 @@ import Background from './Background';
 import Typewriter from 'typewriter-effect';
 import { useMediaQuery } from 'react-responsive';
 
-const Home = () => {
+const Intro = () => {
 	const isPortrait = useMediaQuery({ query: '(orientation: portrait)' });
 
 	return (
 		<MDBContainer className='m-0 p-0' style={{ backgroundColor: '#333' }}>
 			<MDBView>
 				<Background isPortrait={isPortrait} />
-
-				<MDBMask overlay='stylish-strong'>
+				<MDBMask overlay='black-strong'>
 					<div
 						className='content'
 						style={{
 							position: 'absolute',
-							color: 'white',
+							color: '#F9F6EF',
 							top: '40%',
 							left: '0',
 							right: '0',
@@ -26,7 +25,7 @@ const Home = () => {
 						}}
 					>
 						<h3 style={{ fontWeight: '900' }}>Ashutosh Agrawal</h3>
-						<h4>
+						<h4 className='my-3'>
 							I am
 							<Typewriter
 								options={{
@@ -40,23 +39,6 @@ const Home = () => {
 									loop: true,
 								}}
 							/>
-							{/* <Typewriter
-								onInit={(typewriter) => {
-									typewriter
-										.changeDeleteSpeed(10)
-										.typeString('I am a ')
-										.typeString('Full Stack Web Developer')
-										.pauseFor(100)
-										.deleteChars(24)
-										.typeString('MERN Specialist')
-										.pauseFor(100)
-										.deleteChars(15)
-										.typeString('Creative Coder')
-										.pauseFor(100)
-										.deleteChars(14)
-										.start();
-								}}
-							/> */}
 						</h4>
 					</div>
 				</MDBMask>
@@ -65,4 +47,4 @@ const Home = () => {
 	);
 };
 
-export default Home;
+export default Intro;
