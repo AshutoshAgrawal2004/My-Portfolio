@@ -6,7 +6,14 @@ import SkillData from './SkillData';
 
 const SkillItem = ({ skill, i }) => {
 	return (
-		<MDBCol xs='6' md='4' lg='2' className='my-3'>
+		<MDBCol
+			size='4'
+			md='3'
+			lg='2'
+			className='my-3'
+			data-toggle='tooltip'
+			title={skill}
+		>
 			<MDBCard
 				className='p-3'
 				style={{
@@ -23,8 +30,6 @@ const SkillItem = ({ skill, i }) => {
 					src={SkillData[skill]}
 					style={{ width: '100%', margin: 'auto 0' }}
 					alt={skill}
-					data-toggle='tooltip'
-					title={skill}
 				/>
 			</MDBCard>
 		</MDBCol>

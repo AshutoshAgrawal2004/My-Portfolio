@@ -1,10 +1,9 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Intro from './components/Intro';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
+import Intro from './components/Intro/Intro';
+import Projects from './components/Projects/Projects';
+import Skills from './components/Skills/Skills';
 function App() {
 	return (
 		<>
@@ -12,11 +11,6 @@ function App() {
 			<Skills />
 			<Projects />
 		</>
-		// <Router>
-		// 	<Switch>
-		// 		<Route exact path='/' component={Intro} />
-		// 	</Switch>
-		// </Router>
 	);
 }
 

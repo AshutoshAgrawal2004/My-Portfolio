@@ -12,9 +12,6 @@ const Skills = () => {
 				{Object.keys(SkillData).map((skill, i) => (
 					<SkillItem skill={skill} i={i} key={i} />
 				))}
-				{/* {SkillData.map((skill, i) => (
-					<SkillItem skill={skill} i={i} key={i} />
-				))} */}
 			</MDBRow>
 		</MDBContainer>
 	);

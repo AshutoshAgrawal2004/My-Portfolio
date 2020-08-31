@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Sketch from 'react-p5';
 
-import BGL from './images/Steve_landscape.jpg';
-import BGP from './images/Steve Portrait.jpg';
+import BGL from '../images/Steve_landscape.jpg';
+import BGP from '../images/Steve Portrait.jpg';
 var img;
 var window = { width: 1980, height: 1080 };
 const Background = ({ isPortrait }) => {
