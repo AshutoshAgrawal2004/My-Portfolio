@@ -4,10 +4,12 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Intro from './components/Intro';
 import Projects from './components/Projects';
+import Skills from './components/Skills';
 function App() {
 	return (
 		<>
 			<Intro />
+			<Skills />
 			<Projects />
 		</>
 		// <Router>
