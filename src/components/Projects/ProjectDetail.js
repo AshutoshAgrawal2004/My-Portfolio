@@ -86,7 +86,7 @@ const ProjectDetail = ({
 						<h3 className='text-center font-weight-bold mt-5 mb-3'>
 							Technologies Used
 						</h3>
-						<MDBRow>
+						<MDBRow className='pb-3'>
 							{Object.keys(skills).map((skill, i) => (
 								<SkillItem skill={skill} i={i} key={i} />
 							))}

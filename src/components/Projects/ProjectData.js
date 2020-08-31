@@ -44,6 +44,10 @@ import SnowFlake1 from '../images/projects/SnowFlakeMaker/SnowFlake1.png';
 import SnowFlake2 from '../images/projects/SnowFlakeMaker/SnowFlake2.png';
 import SnowFlake3 from '../images/projects/SnowFlakeMaker/SnowFlake3.png';
 
+import Soccer1 from '../images/projects/Soccer/Soccer1.png';
+import Soccer2 from '../images/projects/Soccer/Soccer2.png';
+import Soccer3 from '../images/projects/Soccer/Soccer3.png';
+
 import SkillData from '../Skills/SkillData';
 
 const {
@@ -96,9 +100,22 @@ const ProjectData = [
 			ExpressJS,
 			MongoDB,
 			Regex,
+			JWT,
+			OAuth,
+			Git,
+			Heroku,
 			GoogleAnalytics,
 			FacebookAds,
 		},
+	},
+	{
+		title: 'Periodic Table',
+		images: [PeriodicTable1, PeriodicTable2],
+		about:
+			'Information about all the elements in a beautiful UI made with React and Materialize using Chemistry API',
+		liveLink: 'https://ashutoshagrawal2004.github.io/Elements',
+		source: 'https://github.com/AshutoshAgrawal2004/Elements',
+		skills: { Html, CSS, JS, ReactJS, Redux, Materialize },
 	},
 	{
 		title: 'Live CSS: Project Tracking Intro UI Design',
@@ -112,19 +129,10 @@ const ProjectData = [
 		skills: { Html, CSS, JS },
 	},
 	{
-		title: 'Periodic Table',
-		images: [PeriodicTable1, PeriodicTable2],
+		title: 'E-Learning Platform',
+		images: [ELearning1, ELearning2, ELearning3, ELearning4, ELearning5],
 		about:
-			'Information about all the elements in a beautiful UI made with React and Materialize using Chemistry API',
-		liveLink: 'https://ashutoshagrawal2004.github.io/Elements',
-		source: 'https://github.com/AshutoshAgrawal2004/Elements',
-		skills: { Html, CSS, JS, ReactJS, Redux, Materialize },
-	},
-	{
-		title: 'Application Management System',
-		images: [Applicant1, Applicant2],
-		about:
-			'An Application Management System with easy to use UI and all the features required by the client to productively manage applicants ( leads ).',
+			'E-Learning Platform for students to easily attend their lectures and client to manage them. The client can easily create courses with lessons. Students can easily attend the lectures, ask doubts, and receive notices regarding their classes.',
 		skills: {
 			Html,
 			CSS,
@@ -139,24 +147,14 @@ const ProjectData = [
 		},
 	},
 	{
-		title: 'Workshop Organiser',
-		images: [Workshop1, Workshop2, Workshop3],
-		about:
-			'Workshop Organiser allowing the client to host workshops easily and people to apply and join workshops easily.',
-		liveLink: 'https://www.maytreeschool.com/workshops',
-		skills: {
-			Html,
-			CSS,
-			JS,
-			MDBR,
-			ReactJS,
-			Redux,
-			NodeJS,
-			ExpressJS,
-			MongoDB,
-			Regex,
-		},
+		title: 'Soccer Game',
+		images: [Soccer1, Soccer2, Soccer3],
+		about: 'A 2D Soccer Game with 3 difficulty levels. Have Fun!',
+		liveLink: 'https://ashutoshagrawal2004.github.io/Soccer-Game/',
+		source: 'https://github.com/AshutoshAgrawal2004/Soccer-Game',
+		skills: { Html, CSS, JS, p5JS },
 	},
+
 	{
 		title: 'Pokedex',
 		images: [Pokedex1, Pokedex2, Pokedex3],
@@ -164,17 +162,6 @@ const ProjectData = [
 		liveLink: 'https://ashutoshagrawal2004.github.io/Pokedex',
 		source: 'https://github.com/AshutoshAgrawal2004/Pokedex',
 		skills: { Html, CSS, JS, ReactJS, Redux, Bootstrap },
-	},
-	{
-		title: 'Live CSS: Sign Up Form',
-		images: [CSSForm1],
-		about:
-			'A Design Challenge by Frontend Mentor completed with a creative touch of live CSS',
-		liveLink:
-			'https://ashutoshagrawal2004.github.io/Real-Time-CSS-Sign-Up-Form/index.html',
-		source:
-			'https://github.com/AshutoshAgrawal2004/Real-Time-CSS-Sign-Up-Form',
-		skills: { Html, CSS, JS },
 	},
 	{
 		title: 'Blog',
@@ -196,10 +183,67 @@ const ProjectData = [
 		},
 	},
 	{
-		title: 'E-Learning Platform',
-		images: [ELearning1, ELearning2, ELearning3, ELearning4, ELearning5],
+		title: 'Snow Flake Maker',
+		images: [SnowFlake1, SnowFlake2, SnowFlake3],
+		about: 'The Happy Holiday Code! Make and Share Snow Flakes',
+		liveLink: 'https://ashutoshagrawal2004.github.io/Snow-Flake-Maker/',
+		source: 'https://github.com/AshutoshAgrawal2004/Snow-Flake-Maker',
+		skills: { Html, CSS, JS, p5JS, JQuery, Firebase },
+	},
+
+	{
+		title: 'Collaborative Paint',
+		images: [CP1, CP2, CP3],
 		about:
-			'E-Learning Platform for students to easily attend their lectures and client to manage them. The client can easily create courses with lessons. Students can easily attend the lectures, ask doubts, and receive notices regarding their classes.',
+			'Made using socket.io this will allow multiple clients to connect to server and paint together on the same canvas',
+		liveLink: 'https://collaborate-on-a-paint.herokuapp.com/',
+		source: 'https://github.com/AshutoshAgrawal2004/Collaborative-Painting',
+		skills: { Html, CSS, JS, p5JS, JQuery, SocketIO },
+	},
+	{
+		title: 'Application Management System',
+		images: [Applicant1, Applicant2],
+		about:
+			'An Application Management System with easy to use UI and all the features required by the client to productively manage applicants ( leads ).',
+		skills: {
+			Html,
+			CSS,
+			JS,
+			MDBR,
+			ReactJS,
+			Redux,
+			NodeJS,
+			ExpressJS,
+			MongoDB,
+			Regex,
+		},
+	},
+	{
+		title: 'Maths Quiz: Square & Cube Practise',
+		images: [Maths1, Maths2, Maths3],
+		about: 'A Maths Quiz for practising Square & Cubes of numbers',
+		liveLink: 'https://ashutoshagrawal2004.github.io/Square-Cube-Quiz/',
+		source: 'https://github.com/AshutoshAgrawal2004/Square-Cube-Quiz',
+		skills: { Html, CSS, JS },
+	},
+
+	{
+		title: 'Live CSS: Sign Up Form',
+		images: [CSSForm1],
+		about:
+			'A Design Challenge by Frontend Mentor completed with a creative touch of live CSS',
+		liveLink:
+			'https://ashutoshagrawal2004.github.io/Real-Time-CSS-Sign-Up-Form/index.html',
+		source:
+			'https://github.com/AshutoshAgrawal2004/Real-Time-CSS-Sign-Up-Form',
+		skills: { Html, CSS, JS },
+	},
+	{
+		title: 'Workshop Organiser',
+		images: [Workshop1, Workshop2, Workshop3],
+		about:
+			'Workshop Organiser allowing the client to host workshops easily and people to apply and join workshops easily.',
+		liveLink: 'https://www.maytreeschool.com/workshops',
 		skills: {
 			Html,
 			CSS,
@@ -214,17 +258,17 @@ const ProjectData = [
 		},
 	},
 
-	{
-		title: 'Live CSS: Base Apparel Website Design',
-		images: [BaseApparel1],
-		about:
-			'A Design Challenge by Frontend Mentor completed with a creative touch of live CSS',
-		liveLink:
-			'https://ashutoshagrawal2004.github.io/Base-Apparel-Coming-Soon-UI-Live-CSS/',
-		source:
-			'https://github.com/AshutoshAgrawal2004/Base-Apparel-Coming-Soon-UI-Live-CSS',
-		skills: { Html, CSS, JS },
-	},
+	// {
+	// 	title: 'Live CSS: Base Apparel Website Design',
+	// 	images: [BaseApparel1],
+	// 	about:
+	// 		'A Design Challenge by Frontend Mentor completed with a creative touch of live CSS',
+	// 	liveLink:
+	// 		'https://ashutoshagrawal2004.github.io/Base-Apparel-Coming-Soon-UI-Live-CSS/',
+	// 	source:
+	// 		'https://github.com/AshutoshAgrawal2004/Base-Apparel-Coming-Soon-UI-Live-CSS',
+	// 	skills: { Html, CSS, JS },
+	// },
 	{
 		title: 'Live CSS: Single Price Grid UI',
 		images: [SingleGrid1],
@@ -235,31 +279,6 @@ const ProjectData = [
 		source:
 			'https://github.com/AshutoshAgrawal2004/Single-Price-Grid-UI-Live-CSS',
 		skills: { Html, CSS, JS },
-	},
-	{
-		title: 'Maths Quiz: Square & Cube Practise',
-		images: [Maths1, Maths2, Maths3],
-		about: 'A Maths Quiz for practising Square & Cubes of numbers',
-		liveLink: 'https://ashutoshagrawal2004.github.io/Square-Cube-Quiz/',
-		source: 'https://github.com/AshutoshAgrawal2004/Square-Cube-Quiz',
-		skills: { Html, CSS, JS },
-	},
-	{
-		title: 'Collaborative Paint',
-		images: [CP1, CP2, CP3],
-		about:
-			'Made using socket.io this will allow multiple clients to connect to server and paint together on the same canvas',
-		liveLink: 'https://collaborate-on-a-paint.herokuapp.com/',
-		source: 'https://github.com/AshutoshAgrawal2004/Collaborative-Painting',
-		skills: { Html, CSS, JS, p5JS, JQuery, SocketIO },
-	},
-	{
-		title: 'Snow Flake Maker',
-		images: [SnowFlake1, SnowFlake2, SnowFlake3],
-		about: 'The Happy Holiday Code! Make and Share Snow Flakes',
-		liveLink: 'https://ashutoshagrawal2004.github.io/Snow-Flake-Maker/',
-		source: 'https://github.com/AshutoshAgrawal2004/Snow-Flake-Maker',
-		skills: { Html, CSS, JS, p5JS, JQuery, Firebase },
 	},
 ];
 

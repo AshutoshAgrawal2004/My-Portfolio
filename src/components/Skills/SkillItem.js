@@ -10,7 +10,7 @@ const SkillItem = ({ skill, i }) => {
 			size='4'
 			md='3'
 			lg='2'
-			className='my-3'
+			className='my-3 mx-auto'
 			data-toggle='tooltip'
 			title={skill}
 		>

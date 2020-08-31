@@ -8,7 +8,10 @@ const Intro = () => {
 	const isPortrait = useMediaQuery({ query: '(orientation: portrait)' });
 
 	return (
-		<MDBContainer className='m-0 p-0' style={{ backgroundColor: '#333' }}>
+		<MDBContainer
+			className='m-0 p-0'
+			style={{ backgroundColor: '#333', minHeight: '90vh' }}
+		>
 			<MDBView>
 				<Background isPortrait={isPortrait} />
 				<MDBMask overlay='black-strong'>
@@ -31,10 +34,12 @@ const Intro = () => {
 								options={{
 									strings: [
 										'The Crazy One',
-										'Full Stack Web Developer',
-										'MERN Specialist',
-										'Creative Coder',
+										'A Full Stack Web Developer',
+										'A MERN Specialist',
+										'A Creative Coder',
 									],
+									changeDelay: 10,
+									changeDeleteSpeed: 5,
 									autoStart: true,
 									loop: true,
 								}}

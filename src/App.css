@@ -71,3 +71,23 @@ body {
   background-color: #28ca41;
   top: 0;
 }
+
+
+
+.topound {
+  animation: pound 1s infinite;
+}
+
+@keyframes pound {
+  0% {
+    transform: scale(1.0);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1.0);
+  }
+}

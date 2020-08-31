@@ -7,6 +7,7 @@ const ProjectItem = ({ project, i, toggleProjectDetail }) => {
 	return (
 		<MDBCol
 			lg='6'
+			className='mx-auto'
 			onClick={(event) => {
 				toggleProjectDetail(event, project);
 			}}
