@@ -38,8 +38,8 @@ const Intro = () => {
 										'A MERN Specialist',
 										'A Creative Coder',
 									],
-									changeDelay: 10,
-									changeDeleteSpeed: 5,
+									changeDelay: 3,
+									changeDeleteSpeed: 1,
 									autoStart: true,
 									loop: true,
 								}}
