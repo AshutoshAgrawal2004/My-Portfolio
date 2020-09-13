@@ -1,9 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap');
+
 body {
-  font-family: 'Lato', sans-serif !important;
+  /* font-family: 'Lato', sans-serif !important; */
+  font-family: 'Poppins', sans-serif !important;
   background-color: #2a2a2a !important;
   color: #F9F6EF !important;
+}
+
+button.btn {
+  font-weight: 700 !important;
+  padding: 0.75rem 1rem !important;
 }
 
 .view {
@@ -38,7 +46,6 @@ body {
   text-align: center;
   font-size: 10px;
   text-transform: uppercase;
-  font-family: MontSerrat, Tahoma, Arial, sans-serif;
   font-weight: 700;
   line-height: 26px;
   letter-spacing: -.5px;
@@ -71,6 +78,8 @@ body {
   background-color: #28ca41;
   top: 0;
 }
+
+
 
 
 

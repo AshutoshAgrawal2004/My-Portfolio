@@ -106,9 +106,9 @@ const ProjectDetailCarousalItem = ({
 				style={{ position: 'absolute', top: '10px', right: '10px' }}
 				onClick={toggleProjectDetail}
 			/>
-			<h3>{title}</h3>
+			<h3 className='font-weight-bold'>{title}</h3>
 
-			<p>{about}</p>
+			<p style={{ fontSize: '18px' }}>{about}</p>
 			<MDBRow>
 				{liveLink && (
 					<MDBBtn
