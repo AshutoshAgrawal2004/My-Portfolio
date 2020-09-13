@@ -9,7 +9,7 @@ const ProjectItem = ({ project, i, toggleProjectDetail }) => {
 			lg='6'
 			className='mx-auto'
 			onClick={(event) => {
-				toggleProjectDetail(event, project);
+				toggleProjectDetail(event, i);
 			}}
 		>
 			<MDBCard

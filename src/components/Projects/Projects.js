@@ -7,17 +7,17 @@ import ProjectDetail from './ProjectDetail';
 
 const Projects = () => {
 	const [projectDetailIsOpen, setProjectDetailIsOpen] = useState(false);
-	const [currentProject, setCurrentProject] = useState(ProjectData[0]);
+	const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
 
-	const toggleProjectDetail = (event, project) => {
-		if (project) setCurrentProject(project);
+	const toggleProjectDetail = (event, projectIndex) => {
+		if (projectIndex) setCurrentProjectIndex(projectIndex);
 		setProjectDetailIsOpen(!projectDetailIsOpen);
 	};
 
 	return (
 		<MDBContainer style={{ maxWidth: '900px' }} className='my-5'>
 			<ProjectDetail
-				project={currentProject}
+				projectIndex={currentProjectIndex}
 				toggleProjectDetail={toggleProjectDetail}
 				projectDetailIsOpen={projectDetailIsOpen}
 			/>

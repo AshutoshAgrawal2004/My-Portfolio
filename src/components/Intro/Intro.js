@@ -31,9 +31,9 @@ const Intro = () => {
 							// textShadow: '2px 2px 5px black',
 						}}
 					>
+						<h4 className='my-3'>I am</h4>
 						<h3 style={{ fontWeight: '900' }}>Ashutosh Agrawal</h3>
 						<h4 className='my-3'>
-							I am
 							<Typewriter
 								options={{
 									strings: [
