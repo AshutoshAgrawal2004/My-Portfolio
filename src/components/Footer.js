@@ -62,15 +62,17 @@ const Footer = () => {
 				>
 					<h6 className='fontMont mb-0 mx-2  white-text landing-page'>
 						<MDBIcon icon='envelope' className='mr-1' />{' '}
-						agrawalnidhi635@gmail.com
+						agrawalashutosh635@gmail.com
 					</h6>
 				</MDBRow>
 			</MDBContainer>
 
 			<div className='footer-copyright text-center py-5'>
 				<MDBContainer fluid>
-					&copy; {new Date().getFullYear()} Copyright:{' '}
-					<a href='/'>ashutoshagrawal2004</a> <br />
+					<div className='my-3'>
+						&copy; {new Date().getFullYear()} Copyright:{' '}
+						<a href='/'>ashutoshagrawal2004</a>
+					</div>
 					Made with
 					<MDBIcon icon='heart' className='topound mx-2' /> by{' '}
 					<a
