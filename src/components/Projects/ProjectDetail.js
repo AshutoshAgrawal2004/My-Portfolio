@@ -30,11 +30,19 @@ const ProjectDetail = ({
 	}, [projectIndex]);
 
 	const nextProject = () => {
-		setCurrentProjectIndex(currentProjectIndex + 1);
+		if (currentProjectIndex === ProjectData.length - 1) {
+			setCurrentProjectIndex(0);
+		} else {
+			setCurrentProjectIndex(currentProjectIndex + 1);
+		}
 	};
 
 	const prevProject = () => {
-		setCurrentProjectIndex(currentProjectIndex - 1);
+		if (currentProjectIndex === 0) {
+			setCurrentProjectIndex(ProjectData.length - 1);
+		} else {
+			setCurrentProjectIndex(currentProjectIndex - 1);
+		}
 	};
 	return (
 		<MDBModal
@@ -101,7 +109,7 @@ const ProjectDetailCarousalItem = ({
 			<h3>{title}</h3>
 
 			<p>{about}</p>
-			<div className='text-center d-flex'>
+			<MDBRow>
 				{liveLink && (
 					<MDBBtn
 						color='dark'
@@ -124,7 +132,7 @@ const ProjectDetailCarousalItem = ({
 						View Source
 					</MDBBtn>
 				)}
-			</div>
+			</MDBRow>
 			<div className='project-title-bar mt-3'>
 				<h2>{title}</h2>
 				<i></i>
@@ -140,40 +148,36 @@ const ProjectDetailCarousalItem = ({
 				))}
 			</AwesomeSlider>
 			<MDBRow className='mt-5 mb-3'>
-				{currentProjectIndex > 0 && (
-					<MDBCol size='6' className='mx-auto'>
-						<MDBBtn
-							style={{
-								display: 'flex',
-								justifyContent: 'space-around',
-								alignItems: 'baseline',
-								width: '100%',
-							}}
-							color='dark'
-							onClick={prevProject}
-						>
-							<MDBIcon icon='angle-double-left' />
-							Prev Project
-						</MDBBtn>
-					</MDBCol>
-				)}
-				{currentProjectIndex < ProjectData.length - 1 && (
-					<MDBCol size='6' className='mx-auto'>
-						<MDBBtn
-							style={{
-								display: 'flex',
-								justifyContent: 'space-around',
-								alignItems: 'baseline',
-								width: '100%',
-							}}
-							color='dark'
-							onClick={nextProject}
-						>
-							Next Project
-							<MDBIcon icon='angle-double-right' />
-						</MDBBtn>
-					</MDBCol>
-				)}
+				<MDBCol size='6' className='mx-auto'>
+					<MDBBtn
+						style={{
+							display: 'flex',
+							justifyContent: 'space-around',
+							alignItems: 'baseline',
+							width: '100%',
+						}}
+						color='dark'
+						onClick={prevProject}
+					>
+						<MDBIcon icon='angle-double-left' />
+						Prev Project
+					</MDBBtn>
+				</MDBCol>
+				<MDBCol size='6' className='mx-auto'>
+					<MDBBtn
+						style={{
+							display: 'flex',
+							justifyContent: 'space-around',
+							alignItems: 'baseline',
+							width: '100%',
+						}}
+						color='dark'
+						onClick={nextProject}
+					>
+						Next Project
+						<MDBIcon icon='angle-double-right' />
+					</MDBBtn>
+				</MDBCol>
 			</MDBRow>
 			{skills && (
 				<>

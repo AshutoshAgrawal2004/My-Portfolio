@@ -19,8 +19,10 @@ const SkillItem = ({ skill, i }) => {
 				style={{
 					borderRadius: '0',
 					// boxShadow: '8px 8px 0 rgba(0,0,0,.15)',
+					// boxShadow:
+					// 	'-1vmin -1vmin 2vmin 1vmin #333, 1vmin 1vmin 1vmin #1e1e1e',
 					boxShadow:
-						'-1vmin -1vmin 2vmin 1vmin #333, 1vmin 1vmin 1vmin #1e1e1e',
+						'rgb(255 255 255 / 5%) -1vmin -1vmin 1vmin, rgb(0 0 0 / 30%) 1vmin 1vmin 1vmin',
 					height: '100%',
 					backgroundColor: '#fff0',
 					maxWidth: '150px',
