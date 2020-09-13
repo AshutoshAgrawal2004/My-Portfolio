@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { MDBContainer, MDBView, MDBMask } from 'mdbreact';
 import Background from './Background';
 import Typewriter from 'typewriter-effect';
 import { useMediaQuery } from 'react-responsive';
 
+import BGL from '../images/Steve_landscape.jpg';
+import BGP from '../images/Steve Portrait.jpg';
 const Intro = () => {
 	const isPortrait = useMediaQuery({ query: '(orientation: portrait)' });
+	const backgroundImage = new Image();
+	backgroundImage.src = isPortrait ? BGP : BGL;
 
 	return (
 		<MDBContainer
