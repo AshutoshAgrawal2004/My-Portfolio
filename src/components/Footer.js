@@ -13,8 +13,8 @@ const Footer = () => {
 					className='pt-4 d-flex align-items-center'
 					style={{ justifyContent: 'center' }}
 				>
-					<ul className='landing-page list-unstyled list-inline'>
-						<li className='landing-page mx-3 list-inline-item'>
+					<ul className=' list-unstyled list-inline'>
+						<li className=' mx-3 list-inline-item'>
 							<a
 								target='_blank'
 								href='https://github.com/AshutoshAgrawal2004'
@@ -22,7 +22,7 @@ const Footer = () => {
 								<MDBIcon size='2x' fab icon='github' />
 							</a>
 						</li>
-						<li className='landing-page mx-3 list-inline-item'>
+						<li className=' mx-3 list-inline-item'>
 							<a
 								target='_blank'
 								href='https://www.linkedin.com/in/ashutosh-agrawal-537b70155/'
@@ -30,7 +30,7 @@ const Footer = () => {
 								<MDBIcon size='2x' fab icon='linkedin' />
 							</a>
 						</li>
-						<li className='landing-page mx-3 list-inline-item'>
+						<li className=' mx-3 list-inline-item'>
 							<a
 								target='_blank'
 								href='https://www.hackerrank.com/agrawalnidhi635'
@@ -38,7 +38,7 @@ const Footer = () => {
 								<MDBIcon size='2x' fab icon='hackerrank' />
 							</a>
 						</li>
-						<li className='landing-page mx-3 list-inline-item'>
+						<li className=' mx-3 list-inline-item'>
 							<a
 								target='_blank'
 								href='https://www.sololearn.com/Profile/10779261'
@@ -56,15 +56,28 @@ const Footer = () => {
 						</li>
 					</ul>
 				</MDBRow>
-				<MDBRow
-					className='pb-4 d-flex align-items-center'
-					style={{ justifyContent: 'center' }}
-				>
-					<h6 className='fontMont mb-0 mx-2  white-text landing-page'>
+
+				<div className='pb-4 text-center'>
+					<h6 className='my-3 white-text '>
+						If you wanna get in touch, talk to me about a project or
+						just say hi send an email to{' '}
+						<b>agrawalashutosh635@gmail.com</b> and ~let's talk
+					</h6>
+					<h6 className='my-3 white-text '>
 						<MDBIcon icon='envelope' className='mr-1' />{' '}
 						agrawalashutosh635@gmail.com
 					</h6>
-				</MDBRow>
+					<h6 className='my-3 white-text '>
+						<MDBIcon icon='user-tie' className='mr-1' />{' '}
+						<a
+							href='https://www.freelancer.com/u/Ashu20040808'
+							target='_blank'
+							rel='noopener noreferrer'
+						>
+							<u>Freelancer</u>
+						</a>
+					</h6>
+				</div>
 			</MDBContainer>
 
 			<div className='footer-copyright text-center py-5'>
