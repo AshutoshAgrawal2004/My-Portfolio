@@ -4,7 +4,7 @@ import Sketch from 'react-p5';
 
 import BGL from '../images/Steve_landscape.jpg';
 import BGP from '../images/Steve Portrait.jpg';
-var img;
+var img, gp5;
 var window = { width: 1980, height: 1080 };
 const Background = ({ isPortrait }) => {
 	let particles = [];
@@ -15,6 +15,7 @@ const Background = ({ isPortrait }) => {
 	return (
 		<Sketch
 			preload={(p5) => {
+				gp5 = p5;
 				// img = p5.loadImage(Bg);
 				img = isPortrait ? p5.loadImage(BGP) : p5.loadImage(BGL);
 			}}
@@ -39,7 +40,6 @@ const Background = ({ isPortrait }) => {
 						new Particle(
 							p5.random(p5.width),
 							p5.random(p5.height),
-							p5,
 							brushSize
 						)
 					);
@@ -61,49 +61,44 @@ const Background = ({ isPortrait }) => {
 	);
 };
 class Particle {
-	constructor(x, y, p5, bs) {
+	constructor(x, y, bs) {
 		this.x = x;
 		this.y = y;
 		this.xvel = 10;
 		this.yvel = 10;
 		this.lastx = this.x;
 		this.lasty = this.y;
-		this.p5 = p5;
 		this.bs = bs;
 	}
 	update() {
 		this.lastx = this.x;
 		this.lasty = this.y;
-		this.y += Math.floor(this.p5.random(0, this.yvel));
-		this.x += Math.floor(this.p5.random(0, this.xvel));
+		this.y += Math.floor(gp5.random(0, this.yvel));
+		this.x += Math.floor(gp5.random(0, this.xvel));
 
-		if (this.y > this.p5.height || this.y < 0) {
+		if (this.y > gp5.height || this.y < 0) {
 			this.yvel *= -1;
 		}
-		if (this.x > this.p5.width || this.x < 0) {
+		if (this.x > gp5.width || this.x < 0) {
 			this.xvel *= -1;
 		}
-		this.x = this.p5.constrain(this.x, 0, this.p5.width);
-		this.y = this.p5.constrain(this.y, 0, this.p5.height);
+		this.x = gp5.constrain(this.x, 0, gp5.width);
+		this.y = gp5.constrain(this.y, 0, gp5.height);
 	}
 	show() {
-		var px = this.p5.map(this.x, 0, this.p5.width, 0, img.width);
-		var py = this.p5.map(this.y, 0, this.p5.height, 0, img.height);
+		var px = gp5.map(this.x, 0, gp5.width, 0, img.width);
+		var py = gp5.map(this.y, 0, gp5.height, 0, img.height);
 		var col = img.get(px, py);
-		this.p5.noStroke();
-		this.p5.fill(col[0], col[1], col[2]);
-		this.p5.beginShape();
-		for (
-			let a = 0;
-			a <= 360;
-			a += 360 / this.p5.floor(this.p5.random(3, 6))
-		) {
-			let xx = this.bs * this.p5.sin(a) + this.x;
-			let yy = this.bs * this.p5.cos(a) + this.y;
-			this.p5.vertex(xx, yy);
+		gp5.noStroke();
+		gp5.fill(col[0], col[1], col[2]);
+		gp5.beginShape();
+		for (let a = 0; a <= 360; a += 360 / gp5.floor(gp5.random(3, 6))) {
+			let xx = this.bs * gp5.sin(a) + this.x;
+			let yy = this.bs * gp5.cos(a) + this.y;
+			gp5.vertex(xx, yy);
 		}
-		this.p5.endShape(this.p5.CLOSE);
-		// this.p5.ellipse(this.x, this.y, this.p5.random(this.bs), this.p5.random(this.bs));
+		gp5.endShape(gp5.CLOSE);
+		// gp5.ellipse(this.x, this.y, gp5.random(this.bs), gp5.random(this.bs));
 	}
 }
 
