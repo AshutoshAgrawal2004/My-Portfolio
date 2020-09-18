@@ -7,7 +7,7 @@ import SkillItem from './SkillItem';
 const Skills = () => {
 	return (
 		<MDBContainer style={{ maxWidth: '900px' }} className='my-5'>
-			<h1 className='text-center font-weight-bold my-3'>Skills</h1>
+			<h1 className='text-center font-weight-bold my-3'>My Toolbox</h1>
 			<MDBRow>
 				{Object.keys(SkillData).map((skill, i) => (
 					<SkillItem skill={skill} i={i} key={i} />

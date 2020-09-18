@@ -22,6 +22,7 @@ const Projects = () => {
 				projectDetailIsOpen={projectDetailIsOpen}
 			/>
 			<h1 className='text-center font-weight-bold my-3'>Projects</h1>
+			<p className='text-center'>Click on a project to view details</p>
 			<MDBRow>
 				{ProjectData.map((project, i) => (
 					<ProjectItem
