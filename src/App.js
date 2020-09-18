@@ -5,6 +5,7 @@ import ReactGA from 'react-ga';
 import Intro from './components/Intro/Intro';
 import Projects from './components/Projects/Projects';
 import Skills from './components/Skills/Skills';
+import Clients from './components/Clients/Clients';
 import Footer from './components/Footer';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
 			<Intro />
 			<Skills />
 			<Projects />
+			<Clients />
 			<Footer />
 		</>
 	);
