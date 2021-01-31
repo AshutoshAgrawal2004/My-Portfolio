@@ -16,6 +16,8 @@
 		"react-responsive": "^8.1.0",
 		"react-router-dom": "^5.2.0",
 		"react-scripts": "3.4.3",
+		"react-slick": "^0.28.0",
+		"slick-carousel": "^1.8.1",
 		"typewriter-effect": "^2.13.1"
 	},
 	"scripts": {

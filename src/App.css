@@ -78,6 +78,10 @@ button.btn {
   top: 0;
 }
 
+.slick-list {
+  padding: 20px 60px !important;
+}
+
 
 
 
