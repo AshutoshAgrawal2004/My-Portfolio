@@ -21,9 +21,7 @@ const ProjectDetail = ({
 	toggleProjectDetail,
 	projectDetailIsOpen,
 }) => {
-	const [currentProjectIndex, setCurrentProjectIndex] = useState(
-		projectIndex
-	);
+	const [currentProjectIndex, setCurrentProjectIndex] = useState(projectIndex);
 
 	useEffect(() => {
 		setCurrentProjectIndex(projectIndex);

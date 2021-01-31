@@ -54,6 +54,26 @@ import Soccer1 from '../images/projects/Soccer/Soccer1.png';
 import Soccer2 from '../images/projects/Soccer/Soccer2.png';
 import Soccer3 from '../images/projects/Soccer/Soccer3.png';
 
+import RT1 from '../images/projects/RemoteTeacher/RT1.png';
+import RT2 from '../images/projects/RemoteTeacher/RT2.png';
+import RT3 from '../images/projects/RemoteTeacher/RT3.png';
+import RT4 from '../images/projects/RemoteTeacher/RT4.png';
+import RT5 from '../images/projects/RemoteTeacher/RT5.png';
+
+import AT1 from '../images/projects/AppuTv/AT1.png';
+import AT2 from '../images/projects/AppuTv/AT2.png';
+import AT3 from '../images/projects/AppuTv/AT3.png';
+
+import BGR1 from '../images/projects/BackgroundRemover/BGR1.png';
+import BGR2 from '../images/projects/BackgroundRemover/BGR2.png';
+
+import PS1 from '../images/projects/Proshop/PS1.png';
+import PS2 from '../images/projects/Proshop/PS2.png';
+import PS3 from '../images/projects/Proshop/PS3.png';
+import PS4 from '../images/projects/Proshop/PS4.png';
+
+import MF1 from '../images/projects/MovieFinder/MF1.png';
+
 import SkillData from '../Skills/SkillData';
 
 const {
@@ -89,9 +109,39 @@ const {
 	Postman,
 	AdobePS,
 	Canva,
+	TypeScript,
+	Sass,
+	Stripe,
+	AWS,
+	ReactNative,
+	AndroidStudio,
 } = SkillData;
 
 const ProjectData = [
+	{
+		title: 'RemoteTeacher.io',
+		images: [RT1, RT2, RT3, RT4, RT5],
+		about:
+			'Remoteteacher.io is an online marketplace where teachers and students connect for one-on-one online lessons.\nIf you are a student, find the perfect teacher for you and take lessons at any time that is convenient for you.\nIf you are a teacher with specialized knowledge in a subject that you would like to share make sure to register!',
+		liveLink: 'https://remoteteacher.io',
+		skills: {
+			Html,
+			CSS,
+			JS,
+			Bootstrap,
+			Sass,
+			ReactJS,
+			NodeJS,
+			ExpressJS,
+			MySQL,
+			JWT,
+			OAuth,
+			Git,
+			AWS,
+			Stripe,
+			GoogleAnalytics,
+		},
+	},
 	{
 		title: 'MaytreeSchool.com',
 		images: [Maytree1, Maytree2, Maytree3],
@@ -126,6 +176,45 @@ const ProjectData = [
 		skills: { Html, CSS, JS, ReactJS, Redux, Materialize },
 	},
 	{
+		title: 'Proshop - Ecommerce',
+		images: [PS1, PS2, PS3, PS4],
+		about:
+			'An Ecommerce platform built with the MERN Stack. This is the course project from Brad Traversy MERN Stack Course.',
+		liveLink: 'https://proshop-store.herokuapp.com/',
+		source: 'https://github.com/bradtraversy/proshop_mern',
+		skills: {
+			Html,
+			CSS,
+			JS,
+			Bootstrap,
+			ReactJS,
+			Redux,
+			NodeJS,
+			ExpressJS,
+			MongoDB,
+			JWT,
+			Git,
+			Heroku,
+		},
+	},
+
+	{
+		title: 'Airaser - Background Remover',
+		images: [BGR2, BGR1],
+		about:
+			'An app for removing backgrounds from an image perfectly using AI and Machine Learning. The AI and Backend is made by Alankar Shukla (https://github.com/alan-ai-learner)',
+		liveLink: 'https://airaser.com/',
+		source: 'https://github.com/alan-ai-learner',
+		skills: { Html, CSS, JS, Materialize, JQuery, Python },
+	},
+	{
+		title: 'Appu Tv',
+		images: [AT1, AT2, AT3],
+		about: 'A video streaming platform for kids, prototyped using youtube API',
+		liveLink: 'https://apputv.netlify.app',
+		skills: { Html, CSS, JS, ReactJS, MDBR, Netlify },
+	},
+	{
 		title: 'My Portfolio',
 		images: [P1, P2, P3, P4, P5],
 		about: 'My Portfolio Website',
@@ -134,16 +223,25 @@ const ProjectData = [
 		skills: { Html, CSS, JS, ReactJS, MDBR, p5JS, Netlify },
 	},
 	{
-		title: 'Live CSS: Project Tracking Intro UI Design',
-		images: [ProjectTracking1],
-		about:
-			'A Design Challenge by Frontend Mentor completed with a creative touch of live CSS',
-		liveLink:
-			'https://ashutoshagrawal2004.github.io/Project-Tracking-Intro-UI-Design-Live-CSS/',
-		source:
-			'https://github.com/AshutoshAgrawal2004/Project-Tracking-Intro-UI-Design-Live-CSS',
-		skills: { Html, CSS, JS },
+		title: 'Snow Flake Maker',
+		images: [SnowFlake1, SnowFlake2, SnowFlake3],
+		about: 'The Happy Holiday Code! Make and Share Snow Flakes',
+		liveLink: 'https://ashutoshagrawal2004.github.io/Snow-Flake-Maker/',
+		source: 'https://github.com/AshutoshAgrawal2004/Snow-Flake-Maker',
+		skills: { Html, CSS, JS, p5JS, JQuery, Firebase },
 	},
+	// {
+	// 	title: 'Live CSS: Project Tracking Intro UI Design',
+	// 	images: [ProjectTracking1],
+	// 	about:
+	// 		'A Design Challenge by Frontend Mentor completed with a creative touch of live CSS',
+	// 	liveLink:
+	// 		'https://ashutoshagrawal2004.github.io/Project-Tracking-Intro-UI-Design-Live-CSS/',
+	// 	source:
+	// 		'https://github.com/AshutoshAgrawal2004/Project-Tracking-Intro-UI-Design-Live-CSS',
+	// 	skills: { Html, CSS, JS },
+	// },
+
 	{
 		title: 'E-Learning Platform',
 		images: [ELearning1, ELearning2, ELearning3, ELearning4, ELearning5],
@@ -196,24 +294,6 @@ const ProjectData = [
 			MongoDB,
 		},
 	},
-	{
-		title: 'Snow Flake Maker',
-		images: [SnowFlake1, SnowFlake2, SnowFlake3],
-		about: 'The Happy Holiday Code! Make and Share Snow Flakes',
-		liveLink: 'https://ashutoshagrawal2004.github.io/Snow-Flake-Maker/',
-		source: 'https://github.com/AshutoshAgrawal2004/Snow-Flake-Maker',
-		skills: { Html, CSS, JS, p5JS, JQuery, Firebase },
-	},
-
-	{
-		title: 'Collaborative Paint',
-		images: [CP1, CP2, CP3],
-		about:
-			'Made using socket.io this will allow multiple clients to connect to server and paint together on the same canvas',
-		liveLink: 'https://collaborate-on-a-paint.herokuapp.com/',
-		source: 'https://github.com/AshutoshAgrawal2004/Collaborative-Painting',
-		skills: { Html, CSS, JS, p5JS, JQuery, NodeJS, ExpressJS, SocketIO },
-	},
 
 	// {
 	// 	title: 'Maths Quiz: Square & Cube Practise',
@@ -223,17 +303,16 @@ const ProjectData = [
 	// 	source: 'https://github.com/AshutoshAgrawal2004/Square-Cube-Quiz',
 	// 	skills: { Html, CSS, JS },
 	// },
-	{
-		title: 'Live CSS: Sign Up Form',
-		images: [CSSForm1],
-		about:
-			'A Design Challenge by Frontend Mentor completed with a creative touch of live CSS',
-		liveLink:
-			'https://ashutoshagrawal2004.github.io/Real-Time-CSS-Sign-Up-Form/index.html',
-		source:
-			'https://github.com/AshutoshAgrawal2004/Real-Time-CSS-Sign-Up-Form',
-		skills: { Html, CSS, JS },
-	},
+	// {
+	// 	title: 'Live CSS: Sign Up Form',
+	// 	images: [CSSForm1],
+	// 	about:
+	// 		'A Design Challenge by Frontend Mentor completed with a creative touch of live CSS',
+	// 	liveLink:
+	// 		'https://ashutoshagrawal2004.github.io/Real-Time-CSS-Sign-Up-Form/index.html',
+	// 	source: 'https://github.com/AshutoshAgrawal2004/Real-Time-CSS-Sign-Up-Form',
+	// 	skills: { Html, CSS, JS },
+	// },
 	{
 		title: 'Application Management System',
 		images: [Applicant1, Applicant2],
@@ -250,6 +329,22 @@ const ProjectData = [
 			ExpressJS,
 			MongoDB,
 		},
+	},
+	{
+		title: 'Collaborative Paint',
+		images: [CP1, CP2, CP3],
+		about:
+			'Made using socket.io this will allow multiple clients to connect to server and paint together on the same canvas',
+		liveLink: 'https://collaborate-on-a-paint.herokuapp.com/',
+		source: 'https://github.com/AshutoshAgrawal2004/Collaborative-Painting',
+		skills: { Html, CSS, JS, p5JS, JQuery, NodeJS, ExpressJS, SocketIO },
+	},
+	{
+		title: 'Movie Finder',
+		images: [MF1],
+		about:
+			'Using IMDB API, get information about all your favourite movies, shows, series quickly.',
+		skills: { Html, CSS, JS },
 	},
 	{
 		title: 'Workshop Organiser',
@@ -281,17 +376,17 @@ const ProjectData = [
 	// 		'https://github.com/AshutoshAgrawal2004/Base-Apparel-Coming-Soon-UI-Live-CSS',
 	// 	skills: { Html, CSS, JS },
 	// },
-	{
-		title: 'Live CSS: Single Price Grid UI',
-		images: [SingleGrid1],
-		about:
-			'A Design Challenge by Frontend Mentor completed with a creative touch of live CSS',
-		liveLink:
-			'https://ashutoshagrawal2004.github.io/Single-Price-Grid-UI-Live-CSS/',
-		source:
-			'https://github.com/AshutoshAgrawal2004/Single-Price-Grid-UI-Live-CSS',
-		skills: { Html, CSS, JS },
-	},
+	// {
+	// 	title: 'Live CSS: Single Price Grid UI',
+	// 	images: [SingleGrid1],
+	// 	about:
+	// 		'A Design Challenge by Frontend Mentor completed with a creative touch of live CSS',
+	// 	liveLink:
+	// 		'https://ashutoshagrawal2004.github.io/Single-Price-Grid-UI-Live-CSS/',
+	// 	source:
+	// 		'https://github.com/AshutoshAgrawal2004/Single-Price-Grid-UI-Live-CSS',
+	// 	skills: { Html, CSS, JS },
+	// },
 ];
 
 export default ProjectData;

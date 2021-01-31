@@ -28,17 +28,26 @@ import SocketIO from '../images/Toolbox/SocketIO.png';
 import MySQL from '../images/Toolbox/MySQL.png';
 import Php from '../images/Toolbox/Php.png';
 import Netlify from '../images/Toolbox/Netlify.png';
+import AndroidStudio from '../images/Toolbox/AndroidStudio.png';
+import AWS from '../images/Toolbox/AWS.jpg';
+import ReactNative from '../images/Toolbox/ReactNative.png';
+import Sass from '../images/Toolbox/Sass.png';
+import Stripe from '../images/Toolbox/Stripe.jpg';
+import TypeScript from '../images/Toolbox/TypeScript.png';
 
 const SkillData = {
 	Html,
 	CSS,
 	JS,
+	TypeScript,
 	JQuery,
 	p5JS,
+	Sass,
 	Bootstrap,
 	Materialize,
 	MDBR,
 	Firebase,
+	Stripe,
 	MySQL,
 	Php,
 	MongoDB,
@@ -48,6 +57,9 @@ const SkillData = {
 	Redux,
 	Heroku,
 	Netlify,
+	AWS,
+	ReactNative,
+	AndroidStudio,
 	JWT,
 	OAuth,
 	SocketIO,
