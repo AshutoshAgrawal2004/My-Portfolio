@@ -11,6 +11,7 @@ const Clients = () => {
 		infinite: true,
 		centerPadding: '60px',
 		slidesToShow: 3,
+		slidesToScroll: 3,
 		speed: 500,
 		dots: true,
 		draggable: true,
@@ -19,7 +20,7 @@ const Clients = () => {
 				breakpoint: 600,
 				settings: {
 					slidesToShow: 1,
-					slidesToScroll: 3,
+					slidesToScroll: 1,
 				},
 			},
 		],
