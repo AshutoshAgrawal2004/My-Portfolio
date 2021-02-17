@@ -1,14 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import {
-	MDBModal,
-	MDBModalBody,
-	MDBModalHeader,
-	MDBBtn,
-	MDBIcon,
-	MDBRow,
-	MDBCol,
-} from 'mdbreact';
+import { MDBContainer, MDBBtn, MDBIcon, MDBRow, MDBCol } from 'mdbreact';
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
 import 'react-awesome-slider/dist/custom-animations/cube-animation.css';
@@ -16,54 +8,38 @@ import 'react-awesome-slider/dist/custom-animations/cube-animation.css';
 import SkillItem from '../Skills/SkillItem';
 import ProjectData from './ProjectData';
 
-const ProjectDetail = ({
-	projectIndex,
-	toggleProjectDetail,
-	projectDetailIsOpen,
-}) => {
-	const [currentProjectIndex, setCurrentProjectIndex] = useState(projectIndex);
-
-	useEffect(() => {
-		setCurrentProjectIndex(projectIndex);
-	}, [projectIndex]);
+const ProjectDetail = ({ history, match }) => {
+	const projectIndex = Number(match.params.index);
 
 	const nextProject = () => {
-		if (currentProjectIndex === ProjectData.length - 1) {
-			setCurrentProjectIndex(0);
-		} else {
-			setCurrentProjectIndex(currentProjectIndex + 1);
-		}
+		const newIndex =
+			ProjectData.length > projectIndex + 1 ? projectIndex + 1 : 0;
+		console.log(newIndex, ProjectData[newIndex]);
+		history.push(`/projects/${newIndex}/${ProjectData[newIndex].title}`);
 	};
 
 	const prevProject = () => {
-		if (currentProjectIndex === 0) {
-			setCurrentProjectIndex(ProjectData.length - 1);
-		} else {
-			setCurrentProjectIndex(currentProjectIndex - 1);
-		}
+		const newIndex =
+			projectIndex - 1 >= 0 ? projectIndex - 1 : ProjectData.length - 1;
+		console.log(newIndex, ProjectData[newIndex]);
+		history.push(`/projects/${newIndex}/${ProjectData[newIndex].title}`);
 	};
 	return (
-		<MDBModal
-			isOpen={projectDetailIsOpen}
-			toggle={toggleProjectDetail}
-			size='lg'
-			centered
+		<MDBContainer
+			style={{
+				backgroundColor: '#242424',
+				maxWidth: '900px',
+				minHeight: '90vh',
+				textAlign: 'center',
+			}}
+			className='my-5 p-3'
 		>
-			{/* <AwesomeSlider
-					animation='cubeAnimation'
-					className='mb-3'
-					bullets={false}
-					organicArrows={false}
-			>
-				
-				</AwesomeSlider> */}
 			<ProjectDetailCarousalItem
-				currentProjectIndex={currentProjectIndex}
-				toggleProjectDetail={toggleProjectDetail}
+				projectIndex={projectIndex}
 				nextProject={nextProject}
 				prevProject={prevProject}
 			/>
-		</MDBModal>
+		</MDBContainer>
 	);
 };
 
@@ -76,33 +52,20 @@ ProjectDetail.propTypes = {
 export default ProjectDetail;
 
 const ProjectDetailCarousalItem = ({
-	currentProjectIndex,
-	toggleProjectDetail,
+	projectIndex,
 	nextProject,
 	prevProject,
 }) => {
-	const [currentProject, setCurrentProject] = useState(
-		ProjectData[currentProjectIndex]
-	);
-
-	useEffect(() => {
-		setCurrentProject(ProjectData[currentProjectIndex]);
-	}, [currentProjectIndex]);
+	const currentProject = ProjectData[projectIndex];
 
 	const { title, images, about, liveLink, source, skills } = currentProject;
 
 	return (
-		<MDBModalBody
-			style={{
-				backgroundColor: '#242424',
-				minHeight: '90vh',
-				textAlign: 'center',
-			}}
-		>
+		<>
 			<MDBIcon
 				icon='times'
 				style={{ position: 'absolute', top: '10px', right: '10px' }}
-				onClick={toggleProjectDetail}
+				// onClick={toggleProjectDetail}
 			/>
 			<h3 className='font-weight-bold'>{title}</h3>
 
@@ -189,6 +152,6 @@ const ProjectDetailCarousalItem = ({
 					</MDBRow>
 				</>
 			)}
-		</MDBModalBody>
+		</>
 	);
 };

@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 
 import { MDBCol, MDBCard, MDBCardImage, MDBView, MDBMask } from 'mdbreact';
 
-const ProjectItem = ({ project, i, toggleProjectDetail }) => {
+const ProjectItem = ({ history, project, i, toggleProjectDetail }) => {
 	return (
 		<MDBCol
 			lg='6'
 			className='mx-auto'
-			onClick={(event) => {
-				toggleProjectDetail(event, i);
+			onClick={() => {
+				history.push(`/projects/${i}/${project.title}`);
 			}}
 		>
 			<MDBCard
@@ -27,10 +27,7 @@ const ProjectItem = ({ project, i, toggleProjectDetail }) => {
 					<h2>{project.title}</h2>
 					<i></i>
 				</div>
-				<MDBCardImage
-					src={project.images[0]}
-					style={{ width: '100%' }}
-				/>
+				<MDBCardImage src={project.images[0]} style={{ width: '100%' }} />
 			</MDBCard>
 		</MDBCol>
 	);
