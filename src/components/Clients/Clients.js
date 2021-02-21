@@ -4,6 +4,8 @@ import Slider from 'react-slick';
 import ClientData from './ClientData';
 import ClientItem from './ClientItem';
 
+import { Helmet } from 'react-helmet';
+
 const Clients = () => {
 	const settings = {
 		className: 'center',
@@ -28,27 +30,32 @@ const Clients = () => {
 		],
 	};
 	return (
-		<MDBContainer style={{ maxWidth: '1200px' }} className='my-5'>
-			<h1 className='text-center font-weight-bold my-3'>Testimonials</h1>
-			<p className='text-center'>
-				Some of My Clients from{' '}
-				<a
-					href='https://www.freelancer.com/u/Ashu20040808'
-					target='_blank'
-					className='white-text font-weight-bold'
-					rel='noopener noreferrer'
-				>
-					Freelancer.com
-				</a>
-			</p>
-			{/* <MDBRow> */}
-			<Slider {...settings}>
-				{ClientData.map((client, i) => (
-					<ClientItem client={client} />
-				))}
-			</Slider>
-			{/* </MDBRow> */}
-		</MDBContainer>
+		<>
+			<Helmet>
+				<title>Clients</title>
+			</Helmet>
+			<MDBContainer style={{ maxWidth: '1200px' }} className='my-5'>
+				<h1 className='text-center font-weight-bold my-3'>Testimonials</h1>
+				<p className='text-center'>
+					Some of My Clients from{' '}
+					<a
+						href='https://www.freelancer.com/u/Ashu20040808'
+						target='_blank'
+						className='white-text font-weight-bold'
+						rel='noopener noreferrer'
+					>
+						Freelancer.com
+					</a>
+				</p>
+				{/* <MDBRow> */}
+				<Slider {...settings}>
+					{ClientData.map((client, i) => (
+						<ClientItem client={client} />
+					))}
+				</Slider>
+				{/* </MDBRow> */}
+			</MDBContainer>
+		</>
 	);
 };
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { MDBContainer, MDBBtn, MDBIcon, MDBRow, MDBCol } from 'mdbreact';
+import { Helmet } from 'react-helmet';
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
 import 'react-awesome-slider/dist/custom-animations/cube-animation.css';
@@ -29,21 +30,26 @@ const ProjectDetail = ({ history, match }) => {
 		);
 	};
 	return (
-		<MDBContainer
-			style={{
-				backgroundColor: '#242424',
-				maxWidth: '900px',
-				minHeight: '90vh',
-				textAlign: 'center',
-			}}
-			className='my-5 p-3'
-		>
-			<ProjectDetailCarousalItem
-				projectIndex={projectIndex}
-				nextProject={nextProject}
-				prevProject={prevProject}
-			/>
-		</MDBContainer>
+		<>
+			<Helmet>
+				<title>{ProjectData[projectIndex].title}</title>
+			</Helmet>
+			<MDBContainer
+				style={{
+					backgroundColor: '#242424',
+					maxWidth: '900px',
+					minHeight: '90vh',
+					textAlign: 'center',
+				}}
+				className='my-5 p-3'
+			>
+				<ProjectDetailCarousalItem
+					projectIndex={projectIndex}
+					nextProject={nextProject}
+					prevProject={prevProject}
+				/>
+			</MDBContainer>
+		</>
 	);
 };
 

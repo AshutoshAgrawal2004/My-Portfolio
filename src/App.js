@@ -14,6 +14,7 @@ import Navigation from './components/layout/Navigation';
 import ScrollToTop from './components/layout/ScrollToTop';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 function App() {
 	useEffect(() => {
@@ -29,6 +30,15 @@ function App() {
 	return (
 		<>
 			<Router>
+				<Helmet
+					titleTemplate='%s - Ashutosh Agrawal'
+					defaultTitle='Ashutosh Agrawal'
+				>
+					<meta
+						name='description'
+						content='Welcome to my portfolio! I am the crazy one, full stack web developer, MERN Specialist & Creative Coder'
+					/>
+				</Helmet>
 				<ScrollToTop scrollToComponent={mainContainer} />
 				<Navigation />
 
