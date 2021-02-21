@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { MDBContainer, MDBView, MDBMask } from 'mdbreact';
 import Background from './Background';
 import Typewriter from 'typewriter-effect';

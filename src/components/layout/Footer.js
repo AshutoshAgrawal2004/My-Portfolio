@@ -1,5 +1,5 @@
 import React from 'react';
-import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBIcon } from 'mdbreact';
+import { MDBContainer, MDBRow, MDBFooter, MDBIcon } from 'mdbreact';
 import SLIcon from '../images/sololearnIcon.svg';
 
 const Footer = () => {
@@ -12,7 +12,11 @@ const Footer = () => {
 				>
 					<ul className=' list-unstyled list-inline'>
 						<li className=' mx-3 list-inline-item'>
-							<a target='_blank' href='https://github.com/AshutoshAgrawal2004'>
+							<a
+								target='_blank'
+								href='https://github.com/AshutoshAgrawal2004'
+								rel='noopener noreferrer'
+							>
 								<MDBIcon size='2x' fab icon='github' />
 							</a>
 						</li>
@@ -20,6 +24,7 @@ const Footer = () => {
 							<a
 								target='_blank'
 								href='https://www.linkedin.com/in/ashutosh-agrawal-537b70155/'
+								rel='noopener noreferrer'
 							>
 								<MDBIcon size='2x' fab icon='linkedin' />
 							</a>
@@ -28,6 +33,7 @@ const Footer = () => {
 							<a
 								target='_blank'
 								href='https://www.hackerrank.com/agrawalnidhi635'
+								rel='noopener noreferrer'
 							>
 								<MDBIcon size='2x' fab icon='hackerrank' />
 							</a>
@@ -36,6 +42,7 @@ const Footer = () => {
 							<a
 								target='_blank'
 								href='https://www.sololearn.com/Profile/10779261'
+								rel='noopener noreferrer'
 							>
 								<img
 									src={SLIcon}
@@ -83,7 +90,11 @@ const Footer = () => {
 					</div>
 					Made with
 					<MDBIcon icon='heart' className='topound mx-2' /> by{' '}
-					<a href='https://github.com/ashutoshagrawal2004' target='_blank'>
+					<a
+						href='https://github.com/ashutoshagrawal2004'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
 						{' '}
 						Ashutosh Agrawal
 					</a>

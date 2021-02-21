@@ -1,9 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-import { MDBCol, MDBCard, MDBCardImage, MDBView, MDBMask } from 'mdbreact';
+import { MDBCol, MDBCard, MDBCardImage } from 'mdbreact';
 
-const ProjectItem = ({ history, project, i, toggleProjectDetail }) => {
+const ProjectItem = ({ history, project, i }) => {
 	return (
 		<MDBCol
 			lg='6'
@@ -32,7 +31,5 @@ const ProjectItem = ({ history, project, i, toggleProjectDetail }) => {
 		</MDBCol>
 	);
 };
-
-ProjectItem.propTypes = {};
 
 export default ProjectItem;

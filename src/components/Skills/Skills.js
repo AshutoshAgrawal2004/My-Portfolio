@@ -1,9 +1,9 @@
 import React from 'react';
-import { MDBContainer, MDBRow } from 'mdbreact';
+import { MDBRow } from 'mdbreact';
+import { Helmet } from 'react-helmet';
 
 import SkillData from './SkillData';
 import SkillItem from './SkillItem';
-import { Helmet } from 'react-helmet';
 
 const Skills = () => {
 	return (

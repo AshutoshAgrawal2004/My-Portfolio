@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { MDBContainer, MDBRow } from 'mdbreact';
+import React from 'react';
+import { MDBContainer } from 'mdbreact';
+import { Helmet } from 'react-helmet';
 import Slider from 'react-slick';
+
 import ClientData from './ClientData';
 import ClientItem from './ClientItem';
-
-import { Helmet } from 'react-helmet';
 
 const Clients = () => {
 	const settings = {
@@ -13,14 +13,14 @@ const Clients = () => {
 		infinite: true,
 		centerPadding: '60px',
 		slidesToShow: 3,
-		slidesToScroll: 3,
+		slidesToScroll: 1,
 		speed: 500,
 		dots: true,
 		draggable: true,
 		// lazyLoad: true,
 		responsive: [
 			{
-				breakpoint: 600,
+				breakpoint: 768,
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,
@@ -47,13 +47,11 @@ const Clients = () => {
 						Freelancer.com
 					</a>
 				</p>
-				{/* <MDBRow> */}
 				<Slider {...settings}>
 					{ClientData.map((client, i) => (
-						<ClientItem client={client} />
+						<ClientItem client={client} key={i} />
 					))}
 				</Slider>
-				{/* </MDBRow> */}
 			</MDBContainer>
 		</>
 	);

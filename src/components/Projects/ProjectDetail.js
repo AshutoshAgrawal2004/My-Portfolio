@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import { MDBContainer, MDBBtn, MDBIcon, MDBRow, MDBCol } from 'mdbreact';
 import { Helmet } from 'react-helmet';
+
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
 import 'react-awesome-slider/dist/custom-animations/cube-animation.css';
@@ -15,7 +15,6 @@ const ProjectDetail = ({ history, match }) => {
 	const nextProject = () => {
 		const newIndex =
 			ProjectData.length > projectIndex + 1 ? projectIndex + 1 : 0;
-		console.log(newIndex, ProjectData[newIndex]);
 		history.push(
 			`/projects/${newIndex}/${ProjectData[newIndex].title.replace(/ /g, '-')}`
 		);
@@ -24,7 +23,6 @@ const ProjectDetail = ({ history, match }) => {
 	const prevProject = () => {
 		const newIndex =
 			projectIndex - 1 >= 0 ? projectIndex - 1 : ProjectData.length - 1;
-		console.log(newIndex, ProjectData[newIndex]);
 		history.push(
 			`/projects/${newIndex}/${ProjectData[newIndex].title.replace(/ /g, '-')}`
 		);
@@ -53,12 +51,6 @@ const ProjectDetail = ({ history, match }) => {
 	);
 };
 
-ProjectDetail.propTypes = {
-	project: PropTypes.object.isRequired,
-	projectDetailIsOpen: PropTypes.bool.isRequired,
-	toggleProjectDetail: PropTypes.func.isRequired,
-};
-
 export default ProjectDetail;
 
 const ProjectDetailCarousalItem = ({
@@ -75,7 +67,6 @@ const ProjectDetailCarousalItem = ({
 			<MDBIcon
 				icon='times'
 				style={{ position: 'absolute', top: '10px', right: '10px' }}
-				// onClick={toggleProjectDetail}
 			/>
 			<h3 className='font-weight-bold'>{title}</h3>
 

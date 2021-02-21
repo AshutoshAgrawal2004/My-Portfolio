@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-import { MDBCol, MDBCard, MDBCardImage, MDBView, MDBMask } from 'mdbreact';
+import { MDBCol, MDBCard } from 'mdbreact';
 import SkillData from './SkillData';
 
 const SkillItem = ({ skill, i }) => {
@@ -37,7 +36,5 @@ const SkillItem = ({ skill, i }) => {
 		</MDBCol>
 	);
 };
-
-SkillItem.propTypes = {};
 
 export default SkillItem;

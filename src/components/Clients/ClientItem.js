@@ -1,10 +1,9 @@
 import React from 'react';
-import { MDBCol, MDBCard, MDBCardBody, MDBCardTitle, MDBIcon } from 'mdbreact';
+import { MDBCard, MDBCardBody, MDBCardTitle, MDBIcon } from 'mdbreact';
 
 const ClientItem = ({ client }) => {
 	const { name, image, review } = client;
 	return (
-		// <MDBCol lg='4' className='mx-auto my-3'>
 		<MDBCard
 			style={{
 				backgroundColor: '#fff0',
@@ -17,6 +16,7 @@ const ClientItem = ({ client }) => {
 		>
 			<img
 				src={image}
+				alt={name}
 				style={{
 					width: '75%',
 					borderRadius: '50%',
@@ -43,7 +43,6 @@ const ClientItem = ({ client }) => {
 				))}
 			</div>
 		</MDBCard>
-		// </MDBCol>
 	);
 };
 

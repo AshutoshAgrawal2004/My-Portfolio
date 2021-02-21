@@ -1,9 +1,9 @@
 import React from 'react';
-import { MDBContainer, MDBRow } from 'mdbreact';
+import { MDBRow } from 'mdbreact';
+import { Helmet } from 'react-helmet';
 
 import ProjectData from './ProjectData';
 import ProjectItem from './ProjectItem';
-import { Helmet } from 'react-helmet';
 
 const Projects = ({ history }) => {
 	return (

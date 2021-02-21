@@ -33,18 +33,9 @@ import Pokedex1 from '../images/projects/Pokedex/Pokedex1.png';
 import Pokedex2 from '../images/projects/Pokedex/Pokedex2.png';
 import Pokedex3 from '../images/projects/Pokedex/Pokedex3.png';
 
-import BaseApparel1 from '../images/projects/Live Css/BaseApparel1.png';
-import CSSForm1 from '../images/projects/Live Css/CSSForm1.png';
-import ProjectTracking1 from '../images/projects/Live Css/ProjectTracking1.png';
-import SingleGrid1 from '../images/projects/Live Css/SingleGrid1.png';
-
 import CP1 from '../images/projects/CollaborativePaint/CP1.png';
 import CP2 from '../images/projects/CollaborativePaint/CP2.png';
 import CP3 from '../images/projects/CollaborativePaint/CP3.png';
-
-import Maths1 from '../images/projects/MathsQuiz/Maths1.png';
-import Maths2 from '../images/projects/MathsQuiz/Maths2.png';
-import Maths3 from '../images/projects/MathsQuiz/Maths3.png';
 
 import SnowFlake1 from '../images/projects/SnowFlakeMaker/SnowFlake1.png';
 import SnowFlake2 from '../images/projects/SnowFlakeMaker/SnowFlake2.png';
@@ -230,17 +221,6 @@ const ProjectData = [
 		source: 'https://github.com/AshutoshAgrawal2004/Snow-Flake-Maker',
 		skills: { Html, CSS, JS, p5JS, JQuery, Firebase },
 	},
-	// {
-	// 	title: 'Live CSS: Project Tracking Intro UI Design',
-	// 	images: [ProjectTracking1],
-	// 	about:
-	// 		'A Design Challenge by Frontend Mentor completed with a creative touch of live CSS',
-	// 	liveLink:
-	// 		'https://ashutoshagrawal2004.github.io/Project-Tracking-Intro-UI-Design-Live-CSS/',
-	// 	source:
-	// 		'https://github.com/AshutoshAgrawal2004/Project-Tracking-Intro-UI-Design-Live-CSS',
-	// 	skills: { Html, CSS, JS },
-	// },
 
 	{
 		title: 'E-Learning Platform',
@@ -295,24 +275,6 @@ const ProjectData = [
 		},
 	},
 
-	// {
-	// 	title: 'Maths Quiz: Square & Cube Practise',
-	// 	images: [Maths1, Maths2, Maths3],
-	// 	about: 'A Maths Quiz for practising Square & Cubes of numbers',
-	// 	liveLink: 'https://ashutoshagrawal2004.github.io/Square-Cube-Quiz/',
-	// 	source: 'https://github.com/AshutoshAgrawal2004/Square-Cube-Quiz',
-	// 	skills: { Html, CSS, JS },
-	// },
-	// {
-	// 	title: 'Live CSS: Sign Up Form',
-	// 	images: [CSSForm1],
-	// 	about:
-	// 		'A Design Challenge by Frontend Mentor completed with a creative touch of live CSS',
-	// 	liveLink:
-	// 		'https://ashutoshagrawal2004.github.io/Real-Time-CSS-Sign-Up-Form/index.html',
-	// 	source: 'https://github.com/AshutoshAgrawal2004/Real-Time-CSS-Sign-Up-Form',
-	// 	skills: { Html, CSS, JS },
-	// },
 	{
 		title: 'Application Management System',
 		images: [Applicant1, Applicant2],
@@ -364,29 +326,6 @@ const ProjectData = [
 			MongoDB,
 		},
 	},
-
-	// {
-	// 	title: 'Live CSS: Base Apparel Website Design',
-	// 	images: [BaseApparel1],
-	// 	about:
-	// 		'A Design Challenge by Frontend Mentor completed with a creative touch of live CSS',
-	// 	liveLink:
-	// 		'https://ashutoshagrawal2004.github.io/Base-Apparel-Coming-Soon-UI-Live-CSS/',
-	// 	source:
-	// 		'https://github.com/AshutoshAgrawal2004/Base-Apparel-Coming-Soon-UI-Live-CSS',
-	// 	skills: { Html, CSS, JS },
-	// },
-	// {
-	// 	title: 'Live CSS: Single Price Grid UI',
-	// 	images: [SingleGrid1],
-	// 	about:
-	// 		'A Design Challenge by Frontend Mentor completed with a creative touch of live CSS',
-	// 	liveLink:
-	// 		'https://ashutoshagrawal2004.github.io/Single-Price-Grid-UI-Live-CSS/',
-	// 	source:
-	// 		'https://github.com/AshutoshAgrawal2004/Single-Price-Grid-UI-Live-CSS',
-	// 	skills: { Html, CSS, JS },
-	// },
 ];
 
 export default ProjectData;
