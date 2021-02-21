@@ -121,11 +121,14 @@ nav{
 
 .nav-link:hover{
   color: #8a8a8a;
-border-bottom: 2px solid #6a6a6a;
+/* border-bottom: 2px solid #6a6a6a; */
+box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+
 }
 
 .nav-link.active{
-  border-bottom: 2px solid #6a6a6a;
+  /* border-bottom: 2px solid #6a6a6a; */
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
   background-color: #212121;
   border-radius: 6px;
 }

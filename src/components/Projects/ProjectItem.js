@@ -9,7 +9,7 @@ const ProjectItem = ({ history, project, i, toggleProjectDetail }) => {
 			lg='6'
 			className='mx-auto'
 			onClick={() => {
-				history.push(`/projects/${i}/${project.title}`);
+				history.push(`/projects/${i}/${project.title.replace(/ /g, '-')}`);
 			}}
 		>
 			<MDBCard

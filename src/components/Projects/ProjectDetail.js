@@ -15,14 +15,18 @@ const ProjectDetail = ({ history, match }) => {
 		const newIndex =
 			ProjectData.length > projectIndex + 1 ? projectIndex + 1 : 0;
 		console.log(newIndex, ProjectData[newIndex]);
-		history.push(`/projects/${newIndex}/${ProjectData[newIndex].title}`);
+		history.push(
+			`/projects/${newIndex}/${ProjectData[newIndex].title.replace(/ /g, '-')}`
+		);
 	};
 
 	const prevProject = () => {
 		const newIndex =
 			projectIndex - 1 >= 0 ? projectIndex - 1 : ProjectData.length - 1;
 		console.log(newIndex, ProjectData[newIndex]);
-		history.push(`/projects/${newIndex}/${ProjectData[newIndex].title}`);
+		history.push(
+			`/projects/${newIndex}/${ProjectData[newIndex].title.replace(/ /g, '-')}`
+		);
 	};
 	return (
 		<MDBContainer

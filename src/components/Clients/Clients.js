@@ -15,12 +15,14 @@ const Clients = () => {
 		speed: 500,
 		dots: true,
 		draggable: true,
+		// lazyLoad: true,
 		responsive: [
 			{
 				breakpoint: 600,
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,
+					centerPadding: '60px',
 				},
 			},
 		],

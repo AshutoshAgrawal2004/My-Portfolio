@@ -1,24 +1,18 @@
 import React from 'react';
 import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBIcon } from 'mdbreact';
-import SLIcon from './images/sololearnIcon.svg';
+import SLIcon from '../images/sololearnIcon.svg';
 
 const Footer = () => {
 	return (
 		<MDBFooter className='page-footer font-small pt-0 mt-5 footer main-footer'>
-			<MDBContainer
-				fluid
-				className='text-center text-md-left social-footer'
-			>
+			<MDBContainer fluid className='text-center text-md-left social-footer'>
 				<MDBRow
 					className='pt-4 d-flex align-items-center'
 					style={{ justifyContent: 'center' }}
 				>
 					<ul className=' list-unstyled list-inline'>
 						<li className=' mx-3 list-inline-item'>
-							<a
-								target='_blank'
-								href='https://github.com/AshutoshAgrawal2004'
-							>
+							<a target='_blank' href='https://github.com/AshutoshAgrawal2004'>
 								<MDBIcon size='2x' fab icon='github' />
 							</a>
 						</li>
@@ -59,13 +53,14 @@ const Footer = () => {
 
 				<div className='pb-4 text-center'>
 					<h6 className='my-3 white-text '>
-						If you wanna get in touch, talk to me about a project or
-						just say hi send an email to{' '}
-						<b>agrawalashutosh635@gmail.com</b> and ~let's talk
+						If you wanna get in touch, talk to me about a project or just say hi
+						send an email to <b>agrawalashutosh635@gmail.com</b> and ~let's talk
 					</h6>
 					<h6 className='my-3 white-text '>
 						<MDBIcon icon='envelope' className='mr-1' />{' '}
-						agrawalashutosh635@gmail.com
+						<a href='mailto:agrawalashutosh635@gmail.com'>
+							agrawalashutosh635@gmail.com
+						</a>
 					</h6>
 					<h6 className='my-3 white-text '>
 						<MDBIcon icon='user-tie' className='mr-1' />{' '}
@@ -88,10 +83,7 @@ const Footer = () => {
 					</div>
 					Made with
 					<MDBIcon icon='heart' className='topound mx-2' /> by{' '}
-					<a
-						href='https://github.com/ashutoshagrawal2004'
-						target='_blank'
-					>
+					<a href='https://github.com/ashutoshagrawal2004' target='_blank'>
 						{' '}
 						Ashutosh Agrawal
 					</a>
