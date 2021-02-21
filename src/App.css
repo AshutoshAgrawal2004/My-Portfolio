@@ -103,3 +103,49 @@ button.btn {
     transform: scale(1.0);
   }
 }
+
+
+nav{
+  background-color: #2222227a;
+  padding: 0.5rem;
+  z-index: 10000;
+
+}
+
+.nav-link{
+  color: #F9F6EF ;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: auto 1rem;
+}
+
+.nav-link:hover{
+  color: #8a8a8a;
+border-bottom: 2px solid #6a6a6a;
+}
+
+.nav-link.active{
+  border-bottom: 2px solid #6a6a6a;
+  background-color: #212121;
+  border-radius: 6px;
+}
+
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky-nav + .routed {
+  padding-top: 86px;
+}
+
+@media only screen and (max-width: 576px) {
+.nav-link{
+  font-size: 1rem;
+  margin: auto 0.5rem;
+}
+}
