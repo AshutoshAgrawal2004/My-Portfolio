@@ -11,7 +11,7 @@ const ProjectItem = ({ history, project, i }) => {
 				history.push(`/projects/${i}/${project.title.replace(/ /g, '-')}`);
 			}}
 		>
-			<MDBCard className='my-3' >
+			<MDBCard className='my-3'>
 				<div className='project-title-bar'>
 					<h2>{project.title}</h2>
 					<i></i>

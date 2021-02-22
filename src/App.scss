@@ -163,13 +163,19 @@ nav{
 
 @media only screen and (max-width: 576px) {
 .nav-link{
-  font-size: 1rem;
-  margin: auto 0.5rem;
+  font-size: 1rem !important; 
+  margin: auto 0.5rem !important;
 }
 }
 
+.slick-current.slick-center{
+  .card{
+    transform: scale(1.05) !important;
+  }
+}
 
 .client-item{
+  transition: transform 0.1s;
   background-color: #ffffff00 !important;
   box-shadow:  RGB(255 255 255 / 5%) -1vmin -1vmin 1vmin, RGB(0 0 0 / 30%) 1vmin 1vmin 1vmin !important;
   height: 580px;
@@ -210,6 +216,8 @@ nav{
 }
 
 .project-item{
+  transition: transform 0.1s;
+
   .card{
     border-radius: 0;
     // boxShadow: '8px 8px 0 rgba(0,0,0,.15)',
@@ -217,6 +225,10 @@ nav{
     // '-1vmin -1vmin 2vmin 1vmin #333, 1vmin 1vmin 1vmin #1e1e1e',
     box-shadow:
       RGB(255 255 255 / 15%) -0.75vmin -0.75vmin 0.75vmin, RGB(0 0 0 / 50%) 0.75vmin 0.75vmin 0.75vmin;
+  }
+
+  &:hover{
+    transform: scale(1.1);
   }
 }
 
@@ -231,9 +243,14 @@ nav{
   height: 100%;
   background-color: #fff0 !important;
   max-width: 150px;
+  transition: transform 0.1s;
 
   img{
     width:100%;
     margin: auto 0;
+  }
+
+  &:hover{
+    transform: scale(1.1);
   }
 }
