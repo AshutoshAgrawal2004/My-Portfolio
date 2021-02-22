@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './App.scss';
 import ReactGA from 'react-ga';
+import History from './components/Routing/History';
 
 import { MDBContainer } from 'mdbreact';
 
@@ -11,17 +12,21 @@ import Skills from './components/Skills/Skills';
 import Clients from './components/Clients/Clients';
 import Footer from './components/layout/Footer';
 import Navigation from './components/layout/Navigation';
-import ScrollToTop from './components/layout/ScrollToTop';
+import ScrollToTop from './components/Routing/ScrollToTop';
 
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Router, Switch, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 function App() {
 	useEffect(() => {
 		if (document.location.hostname.search('localhost') !== 0) {
 			ReactGA.initialize('UA-145155799-2');
-			ReactGA.set({ page: document.location.pathname });
-			ReactGA.pageview(document.location.pathname);
+			ReactGA.set({ page: History.location.pathname });
+			ReactGA.pageview(History.location.pathname);
+			History.listen((location) => {
+				ReactGA.set({ page: location.pathname });
+				ReactGA.pageview(location.pathname + location.search);
+			});
 		}
 	}, []);
 
@@ -29,7 +34,7 @@ function App() {
 
 	return (
 		<>
-			<Router>
+			<Router history={History}>
 				<Helmet
 					titleTemplate='%s - Ashutosh Agrawal'
 					defaultTitle='Ashutosh Agrawal'
