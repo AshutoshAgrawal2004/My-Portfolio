@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import './App.css';
+import './App.scss';
 import ReactGA from 'react-ga';
 
 import { MDBContainer } from 'mdbreact';

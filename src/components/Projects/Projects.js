@@ -11,7 +11,7 @@ const Projects = ({ history }) => {
 			<Helmet>
 				<title>Projects</title>
 			</Helmet>
-			<h1 className='text-center font-weight-bold my-3'>Projects</h1>
+			<h1 className='section-title'>Projects</h1>
 			<p className='text-center'>Click on a project to view details</p>
 			<MDBRow>
 				{ProjectData.map((project, i) => (

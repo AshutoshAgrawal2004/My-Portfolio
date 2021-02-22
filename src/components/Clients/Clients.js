@@ -35,7 +35,7 @@ const Clients = () => {
 				<title>Clients</title>
 			</Helmet>
 			<MDBContainer style={{ maxWidth: '1200px' }} className='my-5'>
-				<h1 className='text-center font-weight-bold my-3'>Testimonials</h1>
+				<h1 className='section-title'>Testimonials</h1>
 				<p className='text-center'>
 					Some of My Clients from{' '}
 					<a

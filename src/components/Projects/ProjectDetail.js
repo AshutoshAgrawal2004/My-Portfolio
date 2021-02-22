@@ -1,5 +1,12 @@
 import React from 'react';
-import { MDBContainer, MDBBtn, MDBIcon, MDBRow, MDBCol } from 'mdbreact';
+import {
+	MDBContainer,
+	MDBBtn,
+	MDBIcon,
+	MDBRow,
+	MDBCol,
+	MDBCard,
+} from 'mdbreact';
 import { Helmet } from 'react-helmet';
 
 import AwesomeSlider from 'react-awesome-slider';
@@ -27,26 +34,24 @@ const ProjectDetail = ({ history, match }) => {
 			`/projects/${newIndex}/${ProjectData[newIndex].title.replace(/ /g, '-')}`
 		);
 	};
+
+	const goBack = () => {
+		history.push('/projects');
+	};
+
 	return (
 		<>
 			<Helmet>
 				<title>{ProjectData[projectIndex].title}</title>
 			</Helmet>
-			<MDBContainer
-				style={{
-					backgroundColor: '#242424',
-					maxWidth: '900px',
-					minHeight: '90vh',
-					textAlign: 'center',
-				}}
-				className='my-5 p-3'
-			>
+			<MDBCard className='project-detail-card my-5 p-3'>
 				<ProjectDetailCarousalItem
 					projectIndex={projectIndex}
 					nextProject={nextProject}
 					prevProject={prevProject}
+					goBack={goBack}
 				/>
-			</MDBContainer>
+			</MDBCard>
 		</>
 	);
 };
@@ -57,6 +62,7 @@ const ProjectDetailCarousalItem = ({
 	projectIndex,
 	nextProject,
 	prevProject,
+	goBack,
 }) => {
 	const currentProject = ProjectData[projectIndex];
 
@@ -64,13 +70,10 @@ const ProjectDetailCarousalItem = ({
 
 	return (
 		<>
-			<MDBIcon
-				icon='times'
-				style={{ position: 'absolute', top: '10px', right: '10px' }}
-			/>
+			<MDBIcon icon='times' onClick={goBack} className='go-back' />
 			<h3 className='font-weight-bold'>{title}</h3>
 
-			<p style={{ fontSize: '18px' }}>{about}</p>
+			<p style={{ fontSize: '1.25rem' }}>{about}</p>
 			<MDBRow>
 				{liveLink && (
 					<MDBBtn
@@ -80,7 +83,7 @@ const ProjectDetailCarousalItem = ({
 						}}
 						className='mx-auto'
 					>
-						Visit Project
+						Visit Project &nbsp; <MDBIcon icon='globe' />
 					</MDBBtn>
 				)}
 				{source && (
@@ -91,7 +94,7 @@ const ProjectDetailCarousalItem = ({
 						}}
 						className='mx-auto'
 					>
-						View Source
+						View Source &nbsp; <MDBIcon fab icon='github' />
 					</MDBBtn>
 				)}
 			</MDBRow>
@@ -112,12 +115,7 @@ const ProjectDetailCarousalItem = ({
 			<MDBRow className='mt-5 mb-3'>
 				<MDBCol size='6' className='mx-auto'>
 					<MDBBtn
-						style={{
-							display: 'flex',
-							justifyContent: 'space-around',
-							alignItems: 'baseline',
-							width: '100%',
-						}}
+						className='project-controls'
 						color='dark'
 						onClick={prevProject}
 					>
@@ -127,12 +125,7 @@ const ProjectDetailCarousalItem = ({
 				</MDBCol>
 				<MDBCol size='6' className='mx-auto'>
 					<MDBBtn
-						style={{
-							display: 'flex',
-							justifyContent: 'space-around',
-							alignItems: 'baseline',
-							width: '100%',
-						}}
+						className='project-controls'
 						color='dark'
 						onClick={nextProject}
 					>

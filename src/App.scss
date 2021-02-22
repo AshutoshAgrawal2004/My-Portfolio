@@ -1,0 +1,239 @@
+
+
+body {
+  /* font-family: 'Lato', sans-serif !important; */
+  font-family: 'Poppins', sans-serif !important;
+  background-color: #2a2a2a !important;
+  color: #F9F6EF !important;
+}
+
+button.btn {
+  font-weight: 700 !important;
+  padding: 0.75rem 1rem !important;
+}
+
+.view {
+  position: inherit !important;
+  overflow: visible !important;
+}
+
+.awssld {
+  .awssld__content {
+    background-color: #242424 !important;
+  
+    &>img, &>video{
+      object-fit: inherit !important;
+      height: unset !important;
+      /* position: unset !important; */
+    }
+  
+    
+  }
+
+  .awssld__bullets{
+    background-color: unset;
+  }
+}
+
+.section-title{
+  font-weight:bold;
+  text-align:center;
+  margin-bottom: 1rem !important;
+  margin-top: 1rem !important;
+}
+
+
+
+
+.project-title-bar {
+  display: block;
+  position: relative;
+  height: 24px;
+  background-color: #ddd;
+  width: 100%;
+  color: #6a6a6a;
+  z-index: 10;
+  h2 {
+    content: attr(data-text);
+    text-align: center;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: -.5px;
+    color: #8a8a8a;
+  }
+  
+
+}
+
+.project-title-bar i,
+.project-title-bar i:before,
+.project-title-bar i::after {
+  height: 12px;
+  width: 12px;
+  display: inline-block;
+  background-color: #ff5f57;
+  border-radius: 50%;
+  position: absolute;
+  top: 6px;
+  left: 10px;
+}
+
+.project-title-bar i:before {
+  content: " ";
+  left: 16px;
+  background-color: #ffbd2e;
+  top: 0;
+}
+
+.project-title-bar i:after {
+  content: " ";
+  left: 32px;
+  background-color: #28ca41;
+  top: 0;
+}
+
+.slick-list {
+  padding: 20px 60px !important;
+}
+
+
+
+
+
+.topound {
+  animation: pound 1s infinite;
+}
+
+@keyframes pound {
+  0% {
+    transform: scale(1.0);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1.0);
+  }
+}
+
+
+nav{
+  background-color: #2222227a;
+  padding: 0.5rem;
+  z-index: 10000;
+
+
+
+.nav-link{
+  color: #F9F6EF ;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: auto 1rem;
+
+  &:hover{
+    color: #8a8a8a;
+    /* border-bottom: 2px solid #6a6a6a; */
+    box-shadow: 0 2px 5px 0 RGB(0 0 0 / 16%), 0 2px 10px 0 RGB(0 0 0 / 12%);
+  }
+
+  &.active{
+    box-shadow: 0 2px 5px 0 RGB(0 0 0 / 16%), 0 2px 10px 0 RGB(0 0 0 / 12%);
+    background-color: #212121;
+    border-radius: 6px;
+  }
+}
+}
+
+
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+ 
+}
+
+
+
+@media only screen and (max-width: 576px) {
+.nav-link{
+  font-size: 1rem;
+  margin: auto 0.5rem;
+}
+}
+
+
+.client-item{
+  background-color: #ffffff00 !important;
+  box-shadow:  RGB(255 255 255 / 5%) -1vmin -1vmin 1vmin, RGB(0 0 0 / 30%) 1vmin 1vmin 1vmin !important;
+  height: 580px;
+  text-align: center;
+
+  img{
+    width: 75%;
+    border-radius: 50%;
+    box-shadow: RGB(255 255 255 / 5%) -1vmin -1vmin 1vmin, RGB(0 0 0 / 30%) 1vmin 1vmin 1vmin;
+  }
+
+  .star-box{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+  }
+}
+
+.project-detail-card{
+  background-color: #242424 !important;
+  min-height: 90vh;
+  text-align: center;
+  position: relative;
+
+  .go-back{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .project-controls{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    width: 100%;
+  }
+}
+
+.project-item{
+  .card{
+    border-radius: 0;
+    // boxShadow: '8px 8px 0 rgba(0,0,0,.15)',
+    // boxShadow:
+    // '-1vmin -1vmin 2vmin 1vmin #333, 1vmin 1vmin 1vmin #1e1e1e',
+    box-shadow:
+      RGB(255 255 255 / 15%) -0.75vmin -0.75vmin 0.75vmin, RGB(0 0 0 / 50%) 0.75vmin 0.75vmin 0.75vmin;
+  }
+}
+
+
+.skill-item{
+  border-radius: 0;
+  // boxShadow: '8px 8px 0 rgba(0,0,0,.15)',
+  // boxShadow:
+  // 	'-1vmin -1vmin 2vmin 1vmin #333, 1vmin 1vmin 1vmin #1e1e1e',
+  box-shadow:
+    RGB(255 255 255 / 5%) -1vmin -1vmin 1vmin, RGB(0 0 0 / 30%) 1vmin 1vmin 1vmin !important;
+  height: 100%;
+  background-color: #fff0 !important;
+  max-width: 150px;
+
+  img{
+    width:100%;
+    margin: auto 0;
+  }
+}
