@@ -6,7 +6,6 @@ import P1 from '../images/projects/MyPortfolio/P1.png';
 import P2 from '../images/projects/MyPortfolio/P2.png';
 import P3 from '../images/projects/MyPortfolio/P3.png';
 import P4 from '../images/projects/MyPortfolio/P4.png';
-import P5 from '../images/projects/MyPortfolio/P5.png';
 
 import Applicant1 from '../images/projects/Applicant Management System/Applicant1.png';
 import Applicant2 from '../images/projects/Applicant Management System/Applicant2.png';
@@ -35,7 +34,6 @@ import Pokedex3 from '../images/projects/Pokedex/Pokedex3.png';
 
 import CP1 from '../images/projects/CollaborativePaint/CP1.png';
 import CP2 from '../images/projects/CollaborativePaint/CP2.png';
-import CP3 from '../images/projects/CollaborativePaint/CP3.png';
 
 import SnowFlake1 from '../images/projects/SnowFlakeMaker/SnowFlake1.png';
 import SnowFlake2 from '../images/projects/SnowFlakeMaker/SnowFlake2.png';
@@ -207,7 +205,7 @@ const ProjectData = [
 	},
 	{
 		title: 'My Portfolio',
-		images: [P1, P2, P3, P4, P5],
+		images: [P1, P2, P3, P4],
 		about: 'My Portfolio Website',
 		liveLink: 'https://ashutosh-agrawal.netlify.app',
 		source: 'https://github.com/AshutoshAgrawal2004/My-Portfolio',
@@ -294,7 +292,7 @@ const ProjectData = [
 	},
 	{
 		title: 'Collaborative Paint',
-		images: [CP1, CP2, CP3],
+		images: [CP1, CP2],
 		about:
 			'Made using socket.io this will allow multiple clients to connect to server and paint together on the same canvas',
 		liveLink: 'https://collaborate-on-a-paint.herokuapp.com/',
